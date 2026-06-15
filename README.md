@@ -203,13 +203,14 @@ Docker Hub
 ---
 
 # 📌 Future Enhancements
-
+```text
 JWT Authentication & Authorization
 Role-Based Access Control (RBAC)
 Swagger / OpenAPI Documentation
 Kubernetes Deployment
 AWS Cloud Deployment
 Monitoring & Logging (Prometheus + Grafana)
+```
 ---
 
 # 👨‍💻 Author
