@@ -1,5 +1,7 @@
 # Employee Management System
 
+A Full Stack Employee Management System built using modern web technologies and containerized with Docker. The project also includes a CI/CD pipeline using GitHub Actions for automated build and deployment workflows.
+
 A Full Stack Employee Management System developed using:
 
 - React.js
@@ -111,6 +113,23 @@ A Full Stack Employee Management System developed using:
 
 ---
 
+## CI/CD Pipeline (GitHub Actions)
+
+This project uses GitHub Actions to automate the build and containerization process.
+
+Pipeline Workflow
+Developer pushes code to the main branch.
+GitHub Actions workflow is triggered automatically.
+Backend and Frontend Docker images are built.
+Images are tagged and pushed to Docker Hub.
+Updated images are ready for deployment using Docker Compose.
+
+## CI/CD Tools Used
+
+GitHub Actions
+Docker
+Docker Hub
+
 ## Docker Containers Running
 
 <p align="center">
@@ -150,34 +169,46 @@ A Full Stack Employee Management System developed using:
 
 ```
 
-# 🐳 Docker Architecture
-
-```text
-+------------------------------------------------------+
-|                 Docker Compose                       |
-+------------------------------------------------------+
-            |                  |                 |
-            |                  |                 |
-+-----------v------+  +--------v-------+  +------v------+
-|  ems-frontend    |  |  ems-backend   |  |   mysql-db  |
-|     ReactJS      |  |  Spring Boot   |  |    MySQL    |
-|    Port: 3000    |  |   Port: 8080   |  |  Port: 3306 |
-+-----------+------+  +--------+-------+  +-------------+
-            |                  |
-            | Axios API Calls  |
-            +------------------+
+🐳 Docker & CI/CD Architecture
++---------------------------------------------------------------+
+|                     GitHub Repository                         |
++-----------------------------+---------------------------------+
+                              |
+                              | Push to main
+                              v
++---------------------------------------------------------------+
+|                  GitHub Actions CI/CD Pipeline                |
+|      Checkout → Build → Docker Build → Docker Push            |
++-----------------------------+---------------------------------+
+                              |
+                              | Push Docker Images
+                              v
++---------------------------------------------------------------+
+|                        Docker Hub                             |
++-----------------------------+---------------------------------+
+                              |
+                              | Pull Images
+                              v
++---------------------------------------------------------------+
+|                      Docker Compose                           |
++---------------------------------------------------------------+
+          |                      |                       |
++---------v---------+  +---------v---------+  +----------v---------+
+|   ems-frontend    |  |   ems-backend     |  |     mysql-db       |
+|     React.js      |  |    Spring Boot    |  |       MySQL        |
+|    Port: 3000     |  |    Port: 8080     |  |    Port: 3306      |
++-------------------+  +-------------------+  +--------------------+
 ```
 ---
 
-# 📌 Future Improvements
+# 📌 Future Enhancements
 
-- JWT Authentication
-- Role Based Access
-- Swagger Documentation
-- CI/CD Pipeline
-- Kubernetes Deployment
-- Cloud Deployment (AWS)
-
+JWT Authentication & Authorization
+Role-Based Access Control (RBAC)
+Swagger / OpenAPI Documentation
+Kubernetes Deployment
+AWS Cloud Deployment
+Monitoring & Logging (Prometheus + Grafana)
 ---
 
 # 👨‍💻 Author
