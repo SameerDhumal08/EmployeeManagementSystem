@@ -1,6 +1,6 @@
 # Employee Management System
 
-A Full Stack Employee Management System built using modern web technologies and containerized with Docker. The project also includes a CI/CD pipeline using GitHub Actions for automated build and deployment workflows.
+A Full Stack Employee Management System built using modern web technologies and containerized with Docker. The project also includes a CI/CD pipeline using GitHub Actions for automated build and deployment workflows..
 
 A Full Stack Employee Management System developed using:
 
