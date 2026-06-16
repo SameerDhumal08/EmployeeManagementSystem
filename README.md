@@ -169,7 +169,9 @@ Docker Hub
 
 ```
 
-🐳 Docker & CI/CD Architecture
+--
+# 🐳 Docker Architecture
+
 ```text
 +---------------------------------------------------------------+
 |                     GitHub Repository                         |
