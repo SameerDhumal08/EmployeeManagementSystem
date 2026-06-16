@@ -7,6 +7,7 @@ const FooterComponent = () => {
     <div>
         <footer className='footer'>
             <span>Employee Management System © 2026</span>
+            <span>Done by Sameer © 2026</span>
         </footer>
     </div>
   )
