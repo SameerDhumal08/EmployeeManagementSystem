@@ -58,6 +58,6 @@ jobs:
           script: |
             cd /home/ubuntu
             docker compose pull
-            docker compose down
+            docker compose down || true
             docker compose up -d
             docker image prune -af
