@@ -61,25 +61,25 @@ Docker Compose
 - MySQL
 
 ## DevOps
-
+```
 Docker
 Docker Compose
 GitHub Actions
 Docker Hub
 AWS EC2
 Elastic IP
-
+```
 ---
 
 # Features
-
+```
 Employee Management
 Add Employee
 Fetch Employee Details
 Store Data in MySQL Database
-
+```
 ##DevOps Features
-
+```
 Automated CI/CD Pipeline
 Dockerized Frontend
 Dockerized Backend
@@ -87,26 +87,26 @@ Dockerized MySQL Database
 Automated Docker Image Push to Docker Hub
 Automated Deployment to AWS EC2
 Persistent MySQL Storage using Docker Volumes
-
+```
 ##CI/CD Workflow
 
 Continuous Integration
 
 When code is pushed to the main branch:
-
+```
 1. GitHub Actions starts automatically
 2. Builds Backend Docker Image
 3. Builds Frontend Docker Image
 4. Pushes Images to Docker Hub
 5. Continuous Deployment
-
+```
 After successful image creation:
-
+```
 1. GitHub Actions connects to AWS EC2 via SSH
 2. Pulls latest Docker images
 3. Stops old containers
 4. Deploys updated containers using Docker Compose
-
+```
 ---
 # 📸 Application Screenshots
 
