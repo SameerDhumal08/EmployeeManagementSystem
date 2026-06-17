@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const REST_API_BASE_URL = 'http://3.110.191.70:8080/api/departments';
+const REST_API_BASE_URL = 'http://3.111.239.30:8080/api/departments';
 
 export const listDepartments = () => axios.get(REST_API_BASE_URL);
 
