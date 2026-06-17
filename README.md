@@ -1,16 +1,45 @@
-# Employee Management System
+# Employee Management System with CI/CD Pipeline
 
-A Full Stack Employee Management System built using modern web technologies and containerized with Docker. The project also includes a CI/CD pipeline using GitHub Actions for automated build and deployment workflows..
+A Full Stack Employee Management System developed using React, Spring Boot, MySQL, Docker, GitHub Actions, Docker Hub, and AWS EC2.
 
-A Full Stack Employee Management System developed using:
+# Project Overview
 
-- React.js
-- Spring Boot
-- MySQL
-- Docker
-- Docker Compose
+This project demonstrates a complete DevOps workflow by automating the build, packaging, deployment, and hosting of a full-stack application.
+
+The application allows users to:
+
+Add Employees
+View Employee Records
+Store Employee Data in MySQL Database
+Access the application through a web browser
+
+The project is containerized using Docker and deployed automatically to AWS EC2 using GitHub Actions CI/CD pipelines.
 
 ---
+# Architecture
+
+Developer
+    |
+    | Git Push
+    v
+GitHub Repository
+    |
+    v
+GitHub Actions
+    |
+    +-- Build Frontend Docker Image
+    +-- Build Backend Docker Image
+    +-- Push Images to Docker Hub
+    |
+    v
+AWS EC2 Instance
+    |
+    +-- Frontend Container
+    +-- Backend Container
+    +-- MySQL Container
+    |
+    v
+Docker Compose
 
 # Technologies Used
 
@@ -31,31 +60,52 @@ A Full Stack Employee Management System developed using:
 ## Database
 - MySQL
 
-## DevOps / Containerization
-- Docker
-- Docker Compose
+## DevOps
+
+Docker
+Docker Compose
+GitHub Actions
+Docker Hub
+AWS EC2
+Elastic IP
 
 ---
 
 # Features
 
-## Employee Operations
-- Add Employee
-- Get All Employees
-- Update Employee
-- Delete Employee
+Employee Management
+Add Employee
+Fetch Employee Details
+Store Data in MySQL Database
 
-## Frontend Features
-- Employee Table UI
-- API Integration using Axios
-- React Hooks (`useState`, `useEffect`)
-- Responsive Bootstrap Design
+##DevOps Features
 
-## Backend Features
-- REST APIs
-- Layered Architecture
-- DTO & Mapper Pattern
-- JPA Repository
+Automated CI/CD Pipeline
+Dockerized Frontend
+Dockerized Backend
+Dockerized MySQL Database
+Automated Docker Image Push to Docker Hub
+Automated Deployment to AWS EC2
+Persistent MySQL Storage using Docker Volumes
+
+##CI/CD Workflow
+
+Continuous Integration
+
+When code is pushed to the main branch:
+
+1. GitHub Actions starts automatically
+2. Builds Backend Docker Image
+3. Builds Frontend Docker Image
+4. Pushes Images to Docker Hub
+5. Continuous Deployment
+
+After successful image creation:
+
+1. GitHub Actions connects to AWS EC2 via SSH
+2. Pulls latest Docker images
+3. Stops old containers
+4. Deploys updated containers using Docker Compose
 
 ---
 # 📸 Application Screenshots
@@ -112,29 +162,96 @@ A Full Stack Employee Management System developed using:
 </p>
 
 ---
+## Docker Images
+<img width="1667" height="107" alt="docker images" src="https://github.com/user-attachments/assets/84059742-870d-4e49-8275-1c74a778c196" />
 
-## CI/CD Pipeline (GitHub Actions)
+---
 
-This project uses GitHub Actions to automate the build and containerization process.
+##Docker Compose Services
 
-Pipeline Workflow
-Developer pushes code to the main branch.
-GitHub Actions workflow is triggered automatically.
-Backend and Frontend Docker images are built.
-Images are tagged and pushed to Docker Hub.
-Updated images are ready for deployment using Docker Compose.
+  MySQL
+  Image: mysql:8.0
+  Port: 3306
 
-## CI/CD Tools Used
+  Backend
+  Spring Boot Application
+  Port: 8080
+  
+  Frontend
+  React Application
+  Port: 80
+  <img width="517" height="655" alt="image" src="https://github.com/user-attachments/assets/3051fbae-7739-41ac-b4a5-65f38ef220b7" />
 
+---
+##Database Persistence
+
+MySQL data persistence is achieved using Docker Volumes.
+
+volumes:
+  mysql-data:
+
+This ensures that employee records remain available even after:
+
+Container restart
+EC2 reboot
+Application redeployment
+
+---
+##AWS Deployment
+
+Infrastructure:
+
+  AWS EC2 Ubuntu Instance
+  <img width="1918" height="865" alt="image" src="https://github.com/user-attachments/assets/b131bb62-34a6-4545-8594-de6edd4852f4" />
+
+  
+  Elastic IP
+  <img width="1917" height="727" alt="elastic ip association" src="https://github.com/user-attachments/assets/0cea8aab-4469-4dcb-ac2d-56101e43b025" />
+
+  Docker Engine
+  
+  Docker Compose
+  <img width="722" height="896" alt="dockerfile on ec2 to run workflow" src="https://github.com/user-attachments/assets/670b5a21-0823-4526-bbf8-c037ef84be3e" />
+
+---
+
+##GitHub Secrets Used
+
+  DOCKERHUB_USERNAME
+  DOCKERHUB_TOKEN
+  EC2_HOST
+  EC2_USERNAME
+  EC2_SSH_KEY
+
+---
+
+##GitHub Actions Workflow
+
+The CI/CD pipeline performs:
+
+Source Code Checkout
+Docker Hub Authentication
+Docker Image Build
+Docker Image Push
+AWS EC2 Deployment
+<img width="1857" height="835" alt="image" src="https://github.com/user-attachments/assets/4917684a-a746-4c44-85e7-f1144dbddbb4" />
+
+---
+
+##Learning Outcomes
+
+Through this project, I gained hands-on experience with:
+
+Docker Containerization
+Docker Compose
 GitHub Actions
-Docker
-Docker Hub
-
-## Docker Containers Running
-
-<p align="center">
-  <img src="" width="900"/>
-</p>
+CI/CD Pipeline Implementation
+Docker Hub Registry
+AWS EC2 Deployment
+Spring Boot Deployment
+React Deployment
+MySQL Persistence
+DevOps Best Practices
 
 ---
 # 📸 Application Architecture
@@ -168,56 +285,12 @@ Docker Hub
 +----------------------+
 
 ```
-
---
-# 🐳 Docker Architecture
-
-```text
-+---------------------------------------------------------------+
-|                     GitHub Repository                         |
-+-----------------------------+---------------------------------+
-                              |
-                              | Push to main
-                              v
-+---------------------------------------------------------------+
-|                  GitHub Actions CI/CD Pipeline                |
-|      Checkout → Build → Docker Build → Docker Push            |
-+-----------------------------+---------------------------------+
-                              |
-                              | Push Docker Images
-                              v
-+---------------------------------------------------------------+
-|                        Docker Hub                             |
-+-----------------------------+---------------------------------+
-                              |
-                              | Pull Images
-                              v
-+---------------------------------------------------------------+
-|                      Docker Compose                           |
-+---------------------------------------------------------------+
-          |                      |                       |
-+---------v---------+  +---------v---------+  +----------v---------+
-|   ems-frontend    |  |   ems-backend     |  |     mysql-db       |
-|     React.js      |  |    Spring Boot    |  |       MySQL        |
-|    Port: 3000     |  |    Port: 8080     |  |    Port: 3306      |
-+-------------------+  +-------------------+  +--------------------+
-```
 ---
 
-# 📌 Future Enhancements
-```text
-JWT Authentication & Authorization
-Role-Based Access Control (RBAC)
-Swagger / OpenAPI Documentation
-Kubernetes Deployment
-AWS Cloud Deployment
-Monitoring & Logging (Prometheus + Grafana)
-```
----
-
-# 👨‍💻 Author
+##Author
 
 Sameer Dhumal
 
-GitHub:
-https://github.com/SameerDhumal08
+GitHub: https://github.com/SameerDhumal08
+LinkedIn: www.linkedin.com/in/sameerdhumal14
+
