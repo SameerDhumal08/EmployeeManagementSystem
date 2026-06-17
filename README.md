@@ -43,24 +43,24 @@ Docker Compose
 ```
 # Technologies Used
 
-## Frontend
-- React.js
-- Axios
-- Bootstrap
-- JavaScript
-- JSX
+    # Frontend
+        -React.js
+        - Axios
+        - Bootstrap
+        - JavaScript
+        - JSX
 
-## Backend
-- Spring Boot
-- Spring Data JPA
-- Hibernate
-- REST API
-- Maven
+    # Backend
+        - Spring Boot
+        - Spring Data JPA
+        - Hibernate
+        - REST API
+        - Maven
 
-## Database
-- MySQL
+    # Database
+        - MySQL
 
-## DevOps
+# DevOps
 ```
 Docker
 Docker Compose
@@ -78,7 +78,7 @@ Add Employee
 Fetch Employee Details
 Store Data in MySQL Database
 ```
-##DevOps Features
+# DevOps Features
 ```
 Automated CI/CD Pipeline
 Dockerized Frontend
@@ -88,7 +88,7 @@ Automated Docker Image Push to Docker Hub
 Automated Deployment to AWS EC2
 Persistent MySQL Storage using Docker Volumes
 ```
-##CI/CD Workflow
+#CI/CD Workflow
 
 Continuous Integration
 
@@ -168,7 +168,7 @@ After successful image creation:
 
 ---
 
-##Docker Compose Services
+#Docker Compose Services
 ```
   MySQL
   Image: mysql:8.0
@@ -184,7 +184,7 @@ After successful image creation:
   <img width="517" height="655" alt="image" src="https://github.com/user-attachments/assets/3051fbae-7739-41ac-b4a5-65f38ef220b7" />
 ```
 ---
-##Database Persistence
+#Database Persistence
 ```
 MySQL data persistence is achieved using Docker Volumes.
 
@@ -198,7 +198,7 @@ EC2 reboot
 Application redeployment
 ```
 ---
-##AWS Deployment
+#AWS Deployment
 
 Infrastructure:
 
@@ -219,7 +219,7 @@ Infrastructure:
 
 ---
 
-##GitHub Secrets Used
+#GitHub Secrets Used
 ```
   DOCKERHUB_USERNAME
   DOCKERHUB_TOKEN
@@ -229,7 +229,7 @@ Infrastructure:
 ```
 ---
 
-##GitHub Actions Workflow
+#GitHub Actions Workflow
 ```
 The CI/CD pipeline performs:
 
@@ -243,7 +243,7 @@ AWS EC2 Deployment
 
 ---
 
-##Learning Outcomes
+#Learning Outcomes
 
 Through this project, I gained hands-on experience with:
 
@@ -292,10 +292,8 @@ Through this project, I gained hands-on experience with:
 ```
 ---
 
-##Author
-
-Sameer Dhumal
-
-GitHub: https://github.com/SameerDhumal08
-LinkedIn: www.linkedin.com/in/sameerdhumal14
+#Author
+    Sameer Dhumal
+    GitHub: https://github.com/SameerDhumal08
+    LinkedIn: www.linkedin.com/in/sameerdhumal14
 
