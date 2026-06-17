@@ -168,7 +168,7 @@ After successful image creation:
 
 ---
 
-#Docker Compose Services
+## Docker Compose Services
 ```
   MySQL
   Image: mysql:8.0
@@ -181,10 +181,11 @@ After successful image creation:
   Frontend
   React Application
   Port: 80
-  <img width="517" height="655" alt="image" src="https://github.com/user-attachments/assets/3051fbae-7739-41ac-b4a5-65f38ef220b7" />
 ```
+  <img width="517" height="655" alt="image" src="https://github.com/user-attachments/assets/3051fbae-7739-41ac-b4a5-65f38ef220b7" />
+
 ---
-#Database Persistence
+## Database Persistence
 ```
 MySQL data persistence is achieved using Docker Volumes.
 
@@ -198,7 +199,7 @@ EC2 reboot
 Application redeployment
 ```
 ---
-#AWS Deployment
+## AWS Deployment
 
 Infrastructure:
 
@@ -219,7 +220,7 @@ Infrastructure:
 
 ---
 
-#GitHub Secrets Used
+## GitHub Secrets Used
 ```
   DOCKERHUB_USERNAME
   DOCKERHUB_TOKEN
@@ -229,7 +230,7 @@ Infrastructure:
 ```
 ---
 
-#GitHub Actions Workflow
+## GitHub Actions Workflow
 ```
 The CI/CD pipeline performs:
 
@@ -243,7 +244,7 @@ AWS EC2 Deployment
 
 ---
 
-#Learning Outcomes
+##Learning Outcomes
 
 Through this project, I gained hands-on experience with:
 
@@ -259,7 +260,7 @@ Through this project, I gained hands-on experience with:
 -DevOps Best Practices
 
 ---
-# 📸 Application Architecture
+## 📸 Application Architecture
 
 ```text
 +----------------------+
@@ -292,7 +293,7 @@ Through this project, I gained hands-on experience with:
 ```
 ---
 
-#Author
+## Author
     Sameer Dhumal
     GitHub: https://github.com/SameerDhumal08
     LinkedIn: www.linkedin.com/in/sameerdhumal14
