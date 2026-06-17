@@ -17,7 +17,7 @@ The project is containerized using Docker and deployed automatically to AWS EC2 
 
 ---
 # Architecture
-
+```
 Developer
     |
     | Git Push
@@ -40,7 +40,7 @@ AWS EC2 Instance
     |
     v
 Docker Compose
-
+```
 # Technologies Used
 
 ## Frontend
