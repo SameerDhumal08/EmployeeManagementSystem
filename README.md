@@ -163,12 +163,13 @@ After successful image creation:
 
 ---
 ## Docker Images
+
 <img width="1667" height="107" alt="docker images" src="https://github.com/user-attachments/assets/84059742-870d-4e49-8275-1c74a778c196" />
 
 ---
 
 ##Docker Compose Services
-
+```
   MySQL
   Image: mysql:8.0
   Port: 3306
@@ -181,10 +182,10 @@ After successful image creation:
   React Application
   Port: 80
   <img width="517" height="655" alt="image" src="https://github.com/user-attachments/assets/3051fbae-7739-41ac-b4a5-65f38ef220b7" />
-
+```
 ---
 ##Database Persistence
-
+```
 MySQL data persistence is achieved using Docker Volumes.
 
 volumes:
@@ -195,38 +196,41 @@ This ensures that employee records remain available even after:
 Container restart
 EC2 reboot
 Application redeployment
-
+```
 ---
 ##AWS Deployment
 
 Infrastructure:
 
   AWS EC2 Ubuntu Instance
+  
   <img width="1918" height="865" alt="image" src="https://github.com/user-attachments/assets/b131bb62-34a6-4545-8594-de6edd4852f4" />
 
   
   Elastic IP
+  
   <img width="1917" height="727" alt="elastic ip association" src="https://github.com/user-attachments/assets/0cea8aab-4469-4dcb-ac2d-56101e43b025" />
 
   Docker Engine
   
   Docker Compose
+
   <img width="722" height="896" alt="dockerfile on ec2 to run workflow" src="https://github.com/user-attachments/assets/670b5a21-0823-4526-bbf8-c037ef84be3e" />
 
 ---
 
 ##GitHub Secrets Used
-
+```
   DOCKERHUB_USERNAME
   DOCKERHUB_TOKEN
   EC2_HOST
   EC2_USERNAME
   EC2_SSH_KEY
-
+```
 ---
 
 ##GitHub Actions Workflow
-
+```
 The CI/CD pipeline performs:
 
 Source Code Checkout
@@ -234,6 +238,7 @@ Docker Hub Authentication
 Docker Image Build
 Docker Image Push
 AWS EC2 Deployment
+```
 <img width="1857" height="835" alt="image" src="https://github.com/user-attachments/assets/4917684a-a746-4c44-85e7-f1144dbddbb4" />
 
 ---
@@ -242,16 +247,16 @@ AWS EC2 Deployment
 
 Through this project, I gained hands-on experience with:
 
-Docker Containerization
-Docker Compose
-GitHub Actions
-CI/CD Pipeline Implementation
-Docker Hub Registry
-AWS EC2 Deployment
-Spring Boot Deployment
-React Deployment
-MySQL Persistence
-DevOps Best Practices
+-Docker Containerization
+-Docker Compose
+-GitHub Actions
+-CI/CD Pipeline Implementation
+-Docker Hub Registry
+-AWS EC2 Deployment
+-Spring Boot Deployment
+-React Deployment
+-MySQL Persistence
+-DevOps Best Practices
 
 ---
 # 📸 Application Architecture
