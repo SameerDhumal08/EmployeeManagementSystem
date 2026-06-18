@@ -88,7 +88,7 @@ Automated Docker Image Push to Docker Hub
 Automated Deployment to AWS EC2
 Persistent MySQL Storage using Docker Volumes
 ```
-#CI/CD Workflow
+# CI/CD Workflow
 
 Continuous Integration
 
@@ -244,7 +244,7 @@ AWS EC2 Deployment
 
 ---
 
-##Learning Outcomes
+# Learning Outcomes
 
 Through this project, I gained hands-on experience with:
 
